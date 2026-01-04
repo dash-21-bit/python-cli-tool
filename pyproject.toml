@@ -1,0 +1,16 @@
+[project]
+name = "python-cli-tool"
+version = "1.0.0"
+description = "A CLI log analyzer that parses access logs, exports CSV stats, and generates a PNG chart."
+requires-python = ">=3.10"
+dependencies = ["matplotlib"]
+
+[project.scripts]
+logtool = "logtool.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
