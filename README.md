@@ -84,3 +84,31 @@ python-cli-tool/
 ├── requirements.txt
 ├── pyproject.toml
 └── README.md
+---
+
+## 5. Installation (Terminal Only)
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+pip install -e .
+```
+## 6. Usage
+Help
+```
+logtool --help
+```
+Basic analysis
+```
+logtool sample_data/logs/access.log
+```
+Export CSV results
+```
+logtool sample_data/logs/access.log --out sample_data/output --top 5
+```
+Generate PNG chart
+```
+logtool sample_data/logs/access.log --plot
+```
